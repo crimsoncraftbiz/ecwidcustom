@@ -13,3 +13,22 @@ xhttp.onreadystatechange = function() {
     console.log(apiResponse); // prints response in format of Search Products request in Ecwid API
   }
 };
+
+{
+	"discounts": [
+		{
+			"value": 10,
+			"type": "PERCENT",
+			"description": "10% off. Thank you for liking us on FB"
+		}
+	],
+	
+	"surcharges": [
+		{
+			"id": "paypal",
+			"value":5,
+			"type":"PERCENT",
+			"description": "5% for PayPal checkout"
+		}
+	]		
+}
