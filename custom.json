@@ -1,0 +1,15 @@
+var xhttp = new XMLHttpRequest();
+var storeId = 60436294;
+var token = 'public_9aU8r32dazgijjT9NkyBt1LARab2qnAy';
+
+var requestURL = 'https://app.ecwid.com/api/v3/'+storeId+'/products?limit=3&token='+token;
+
+xhttp.open("POST", requestURL, true);
+xhttp.send();
+
+xhttp.onreadystatechange = function() {
+  if (xhttp.readyState == 4 && xhttp.status == 200) {
+    var apiResponse = xhttp.responseText;
+    console.log(apiResponse); // prints response in format of Search Products request in Ecwid API
+  }
+};
