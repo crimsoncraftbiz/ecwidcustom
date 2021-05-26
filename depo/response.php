@@ -5,6 +5,8 @@ $req = json_decode(file_get_contents("php://input"),true);
 ​
 // Here you can check/process the order data to calculate surcharge
 ​
+echo "My first PHP script!";
+
 $surcharge = array(
     "surcharges" => array(
         array(
