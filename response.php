@@ -1,9 +1,11 @@
-<?php
-$jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+<html>
+<body>
 
-$obj = json_decode($jsonobj);
+<form action="response.php" method="post">
+Name: <input type="text" name="name"><br>
+E-mail: <input type="text" name="email"><br>
+<input type="submit">
+</form>
 
-echo $obj->Peter;
-echo $obj->Ben;
-echo $obj->Joe;
-?>
+</body>
+</html>
