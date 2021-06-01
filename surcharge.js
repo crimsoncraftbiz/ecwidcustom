@@ -6,7 +6,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 		console.log('The custom app works in payment page!!');
 		
 		// check current payment method
-		document.getElementsByClassName("ec-radiogroup__item--PayPal").click(function () {
+		document.getElementsByClassName("ec-radiogroup__item--PayPal ec-radiogroup__item--module-PayPalStandard").click(function () {
 			console.log('clicked');
 		});
 	}
