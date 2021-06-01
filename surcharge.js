@@ -12,6 +12,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 	}
 	
 	function paypal() {
-		console.log('Selected ' );
-	}
+        var chkYes = document.getElementById("ec-radiogroup__item--module-PayPalStandard");
+        console.log(chkYes);
+    }
 });
