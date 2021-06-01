@@ -10,7 +10,6 @@ Ecwid.OnPageLoaded.add(function(page) {
 	}
 	
 	function paypal() {
-        var chkYes = document.getElementById("ec-radiogroup__item--module-PayPalStandard");
-        console.log(chkYes);
-    }
+        	console.log('clicked');
+    	}
 });
