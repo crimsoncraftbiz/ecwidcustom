@@ -8,6 +8,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 		// check current payment method
 		document.getElementsByClassName("ec-radiogroup__item--checked").onclick = function(){
 			console.log('clicked');
+			console.log(document.getElementsByClassName);
 		};
 	}
 });
