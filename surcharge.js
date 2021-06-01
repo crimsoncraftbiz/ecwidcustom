@@ -6,7 +6,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 		console.log('The custom app works second time!!');
 		
 		// check current payment method
-		document.getElementById("ec-radiogroup__item--checked").onclick = function(){
+		document.getElementsByClassName("ec-radiogroup__item--checked").onclick = function(){
 			console.log('clicked');
 		};
 	}
