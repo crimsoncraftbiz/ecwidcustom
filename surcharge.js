@@ -5,10 +5,12 @@ Ecwid.OnPageLoaded.add(function(page) {
 		//alert this app loaded
 		console.log('The custom app works in payment page!!');
 		
+		/*
 		var element = page.getElementByClassName("form-control__radio");
 		element.onclick = function(event) {
   			console.log(event);
 		};
+		*/
 		
 		// Initialize extra fields
 		ec = ec || {};
