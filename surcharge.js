@@ -5,11 +5,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 		//alert this app loaded
 		console.log('The custom app works in payment page!!');
 		
-		// check current payment method
-		var paypal = document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--2889-1620485335547 ec-radiogroup__item--PayPal ec-radiogroup__item--module-PayPalStandard  ec-radiogroup__item--multiline")[0];
-		
-		paypal.onclick = function () {
-			console.log('clicked');
-		};
+		var radios = document.querySelectorAll('input[type=radio][class="form-control__radio"]');
+		radios.forEach(radio => radio.addEventListener('change', () => console.log(radio.value)));
 	}
 });
