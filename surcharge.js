@@ -5,7 +5,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 		//alert this app loaded
 		console.log('The custom app works in payment page!!');
 		
-		var element = document.getElementByClassName("form-control__radio");
+		var element = page.getElementByClassName("form-control__radio");
 		element.onclick = function(event) {
   			console.log(event);
 		};
