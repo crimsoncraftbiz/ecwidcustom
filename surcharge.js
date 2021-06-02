@@ -6,8 +6,8 @@ Ecwid.OnPageLoaded.add(function(page) {
 		console.log('The custom app works in payment page!!');
 		
 		// check current payment method
-		document.getElementsByTagName("label")[0].className.click(function () {
-			console.log(document.getElementsByTagName("label")[0].className);
+		document.getElementsByclassName("ec-radiogroup__item ec-radiogroup__item--2889-1620485335547 ec-radiogroup__item--PayPal ec-radiogroup__item--module-PayPalStandard  ec-radiogroup__item--multiline").onclick = function () {
+			console.log('clicked');
 		});
 	}
 });
