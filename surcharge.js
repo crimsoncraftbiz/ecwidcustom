@@ -34,7 +34,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 		var x = 0;
 		
 		//Select payment define surcharge percent
-		document.getElementByClassName("ec-radiogroup__item ec-radiogroup__item--2889-1620485335547 ec-radiogroup__item--PayPal ec-radiogroup__item--module-PayPalStandard  ec-radiogroup__item--multiline")[0].addEventListener("click", paypalextra);
+		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--2889-1620485335547 ec-radiogroup__item--PayPal ec-radiogroup__item--module-PayPalStandard  ec-radiogroup__item--multiline")[0].addEventListener("click", paypalextra);
 
 		function paypalextra() {
 			x = 5;
