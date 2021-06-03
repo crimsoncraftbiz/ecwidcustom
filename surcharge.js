@@ -13,23 +13,20 @@ Ecwid.OnPageLoaded.add(function(page) {
 		ec.order.extraFields = ec.order.extraFields || {};
 
 		ec.order.extraFields.surcharge = {
-			'title': 'Tips',
 			'value': 'Custom charge',
-			'type': 'toggleButtonGroup',
 			"options": [
 			{ 
 				"title": "Credit Card Processing Fee",
 				"surcharge": 5
 			},
 			],
-			
-			'surchargeShortName': {
-				'name': 'ProcessingFee',
-				'showSurchargePercentValue': false,
+			"surchargeShortName": {
+				"name": "ProcessingFee",
+				"showSurchargePercentValue": false,
 			},
-			'surchargeType': 'PERCENT'
+			'surchargeType': 'PERCENT',
+			'showZeroSurchargeInTotal': false
 		};
-		Ecwid.refreshConfig();
-	
+		Ecwid.refreshConfig();	
 	}
 });
