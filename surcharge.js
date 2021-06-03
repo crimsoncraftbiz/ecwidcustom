@@ -32,8 +32,10 @@ Ecwid.OnPageLoaded.add(function(page) {
 		console.log("Current page is of type: " + page.type);
 		
 		var x = 0;
+		surcharge_refresh();
 		
-		//Select payment define surcharge percent
+		//Payment surcharge calculation
+		//Payment method is PayPal
 		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--2889-1620485335547 ec-radiogroup__item--PayPal ec-radiogroup__item--module-PayPalStandard  ec-radiogroup__item--multiline")[0].addEventListener("click", paypalextra);
 		
 		//Payment method is Paynow
