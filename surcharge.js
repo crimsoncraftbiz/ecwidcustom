@@ -1,6 +1,32 @@
 Ecwid.OnPageLoaded.add(function(page) {
 	console.log("Current page is of type: " + page.type);
 	
+	if (page.type == "CART") {
+		//alert this app loaded
+		console.log("Current page is of type: " + page.type);
+		
+		// Initialize extra fields
+		ec = ec || {};
+		ec.order = ec.order || {};
+		ec.order.extraFields = ec.order.extraFields || {};
+
+		ec.order.extraFields.surcharge = {
+			'value': 'Credit Card Processing Fee',
+			'options': [{ 
+				"title": "Credit Card Processing Fee",
+				"surcharge": 0
+			},
+			],
+			'surchargeShortName': {
+				'name': 'Processing Fee',
+				'showSurchargePercentValue': false
+			},
+			'surchargeType': 'PERCENT',
+			'showZeroSurchargeInTotal': false
+		};
+		Ecwid.refreshConfig();	
+	}
+	
 	if (page.type == "CHECKOUT_PAYMENT_DETAILS") {
 		//alert this app loaded
 		console.log("Current page is of type: " + page.type);
@@ -8,7 +34,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 		var x = 0;
 		
 		//Select payment define surcharge percent
-		document.getElementByClassName("form-control__radio").addEventListener("click", paypalextra);
+		document.getElementById("myBtn").addEventListener("click", paypalextra);
 
 		function paypalextra() {
 			x = 5;
@@ -23,14 +49,14 @@ Ecwid.OnPageLoaded.add(function(page) {
 			ec.order.extraFields = ec.order.extraFields || {};
 
 			ec.order.extraFields.surcharge = {
-				'value': 'Custom charge',
+				'value': 'Credit Card Processing Fee',
 				'options': [{ 
 					"title": "Credit Card Processing Fee",
 					"surcharge": 5
 				},
 				],
 				'surchargeShortName': {
-					'name': 'ProcessingFee',
+					'name': 'Processing Fee',
 					'showSurchargePercentValue': false
 				},
 				'surchargeType': 'PERCENT',
