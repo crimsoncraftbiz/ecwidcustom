@@ -32,7 +32,6 @@ Ecwid.OnPageLoaded.add(function(page) {
 		console.log("Current page is of type: " + page.type);
 		
 		var x = 0;
-		surcharge_refresh();
 		
 		//Payment surcharge calculation
 		//Payment method is PayPal
