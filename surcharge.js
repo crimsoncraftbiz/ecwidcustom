@@ -40,10 +40,10 @@ Ecwid.OnPageLoaded.add(function(page) {
 		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--6667-1621574903717 ec-radiogroup__item--PayNow   ec-radiogroup__item--multiline")[0].addEventListener("click", revertzero);
 		
 		//Payment method is Bank
-		//document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--1598587240-1620300958613 ec-radiogroup__item--Bank-Transfer   ec-radiogroup__item--multiline")[0].addEventListener("click", revertzero);
+		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--1598587240-1620300958613 ec-radiogroup__item--Bank-Transfer   ec-radiogroup__item--multiline")[0].addEventListener("click", revertzero);
 		
 		//Payment method is Wise
-		//document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--4259-1620485353938 ec-radiogroup__item--Wise   ec-radiogroup__item--multiline")[0].addEventListener("click", wiseextra);
+		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--4259-1620485353938 ec-radiogroup__item--Wise   ec-radiogroup__item--multiline")[0].addEventListener("click", wiseextra);
 		
 		function paypalextra() {
 			x = 5;
