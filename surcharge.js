@@ -35,14 +35,36 @@ Ecwid.OnPageLoaded.add(function(page) {
 		
 		//Select payment define surcharge percent
 		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--2889-1620485335547 ec-radiogroup__item--PayPal ec-radiogroup__item--module-PayPalStandard  ec-radiogroup__item--multiline")[0].addEventListener("click", paypalextra);
-
+		
+		//Payment method is Paynow
+		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--6667-1621574903717 ec-radiogroup__item--PayNow   ec-radiogroup__item--multiline"><div class="ec-radiogroup__radio")[0].addEventListener("click", revertzero);
+		
+		//Payment method is Bank
+		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--checked ec-radiogroup__item--1598587240-1620300958613 ec-radiogroup__item--Bank-Transfer   ec-radiogroup__item--multiline")[0].addEventListener("click", revertzero);
+		
+		//Payment method is Wise
+		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--4259-1620485353938 ec-radiogroup__item--Wise   ec-radiogroup__item--multiline"><div class="ec-radiogroup__radio")[0].addEventListener("click", wiseextra);
+		
 		function paypalextra() {
 			x = 5;
 			console.log("surcharge : " + x);
-			surcharge_refresh();
+			surcharge_refresh(x);
+		}
+		
+		function revertzero() {
+			x = 0;
+			console.log("surcharge : " + x);
+			surcharge_refresh(x);
+		}
+		
+		function wiseextra() {
+			x = 4.5;
+			console.log("surcharge : " + x);
+			surcharge_refresh(x);
 		}
 		
 		function surcharge_refresh() {
+			console.log("surcharge passed in : " + x);
 			// Initialize extra fields
 			ec = ec || {};
 			ec.order = ec.order || {};
@@ -52,7 +74,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 				'value': 'Credit Card Processing Fee',
 				'options': [{ 
 					"title": "Credit Card Processing Fee",
-					"surcharge": 5
+					"surcharge": x
 				},
 				],
 				'surchargeShortName': {
