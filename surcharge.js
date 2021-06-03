@@ -5,12 +5,8 @@ Ecwid.OnPageLoaded.add(function(page) {
 		//alert this app loaded
 		console.log('The custom app works in payment page!!');
 		
-		/*
-		var element = page.getElementByClassName("form-control__radio");
-		element.onclick = function(event) {
-  			console.log(event);
-		};
-		*/
+		var widgets = Ecwid.getInitializedWidgets();
+		console.log(widgets);
 		
 		// Initialize extra fields
 		ec = ec || {};
@@ -18,7 +14,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 		ec.order.extraFields = ec.order.extraFields || {};
 		// Set order surcharge
 		ec.order.extraFields.surcharge = {
-		    'value': 'Custom charge',
+		    'value': 'Credit Card Processing Fee',
 		    "options": [
 		    { 
 			"title": "Custom charge",
@@ -30,7 +26,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 			 "showSurchargePercentValue": false
 		    },
 		    'surchargeType': 'PERCENT'
-		}
+		};
 		Ecwid.refreshConfig();
 	}
 });
