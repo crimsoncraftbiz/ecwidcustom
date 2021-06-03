@@ -4,10 +4,10 @@ Ecwid.OnPageLoaded.add(function(page) {
 	if (page.type == "CHECKOUT_PAYMENT_DETAILS") {
 		//alert this app loaded
 		console.log('The custom app works in payment page!!');
-	}
-});
-
-// Initialize extra fields
+	
+	
+	
+		// Initialize extra fields
 		ec = ec || {};
 		ec.order = ec.order || {};
 		ec.order.extraFields = ec.order.extraFields || {};
@@ -30,3 +30,6 @@ Ecwid.OnPageLoaded.add(function(page) {
 			'surchargeType': 'PERCENT'
 		};
 		Ecwid.refreshConfig();
+	
+	}
+});
