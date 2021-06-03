@@ -48,19 +48,19 @@ Ecwid.OnPageLoaded.add(function(page) {
 		function paypalextra() {
 			x = 5;
 			console.log("surcharge : " + x);
-			surcharge_refresh(x);
+			surcharge_refresh();
 		}
 		
 		function revertzero() {
 			x = 0;
 			console.log("surcharge : " + x);
-			surcharge_refresh(x);
+			surcharge_refresh();
 		}
 		
 		function wiseextra() {
 			x = 4.5;
 			console.log("surcharge : " + x);
-			surcharge_refresh(x);
+			surcharge_refresh();
 		}
 		
 		function surcharge_refresh() {
