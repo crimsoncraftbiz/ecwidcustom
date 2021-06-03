@@ -14,15 +14,14 @@ Ecwid.OnPageLoaded.add(function(page) {
 
 		ec.order.extraFields.surcharge = {
 			'value': 'Custom charge',
-			"options": [
-			{ 
+			'options': [{ 
 				"title": "Credit Card Processing Fee",
 				"surcharge": 5
 			},
 			],
-			"surchargeShortName": {
-				"name": "ProcessingFee",
-				"showSurchargePercentValue": false,
+			'surchargeShortName': {
+			    'name': 'ProcessingFee',
+			    'showSurchargePercentValue': false
 			},
 			'surchargeType': 'PERCENT',
 			'showZeroSurchargeInTotal': false
