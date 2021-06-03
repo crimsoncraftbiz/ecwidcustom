@@ -1,6 +1,10 @@
 Ecwid.OnPageLoaded.add(function(page) {
 	console.log("Current page is of type: " + page.type);
 	
+	if (page.type == "ORDER_CONFIRMATION") {
+		//alert order place?	
+	}
+	
 	if (page.type == "CART") {
 		//alert this app loaded
 		console.log("Current page is of type: " + page.type);
