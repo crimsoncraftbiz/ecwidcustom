@@ -43,7 +43,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--1598587240-1620300958613 ec-radiogroup__item--Bank-Transfer   ec-radiogroup__item--multiline")[0].addEventListener("click", revertzero);
 		
 		//Payment method is Wise
-		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--4259-1620485353938 ec-radiogroup__item--Wise   ec-radiogroup__item--multiline")[0].addEventListener("click", wiseextra);
+		document.getElementsByClassName("ec-radiogroup__item ec-radiogroup__item--4259-1620485353938 ec-radiogroup__item--Wise   ec-radiogroup__item--multiline")[0].addEventListener("click", revertzero);
 		
 		function paypalextra() {
 			x = 5;
@@ -53,12 +53,6 @@ Ecwid.OnPageLoaded.add(function(page) {
 		
 		function revertzero() {
 			x = 0;
-			console.log("surcharge : " + x);
-			surcharge_refresh();
-		}
-		
-		function wiseextra() {
-			x = 4.5;
 			console.log("surcharge : " + x);
 			surcharge_refresh();
 		}
